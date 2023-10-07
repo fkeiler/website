@@ -2,7 +2,7 @@
 
 {% block head %}
 {{ super() }}
-<link rel="canonical" href={{section.permalink}}>
+<link rel="canonical" href="https://felipe.keiler.nom.br{{section.path}}">
 <title>{{section.title}} | {{config.title}}</title>
 <meta name="description" content="{{section.description | safe}}">
 {% endblock %}
