@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="canonical" href={{section.permalink}}>
+<title>{{section.title}} | {{config.title}}</title>
+<meta name="description" content="{{section.description | safe}}">
+{% endblock %}
+
+{% block content %}
+<header>
+    {% for translation in section.translations %}
+    {% if translation.lang != section.lang %}
+    <a href={{ translation.permalink }} hreflang={{ translation.lang }}>{{ trans(key="also_available",
+        lang=translation.lang) }}</a>
+    {% endif %}
+    {% endfor %}
+</header>
+{{ section.content | safe}}
+{% endblock %}

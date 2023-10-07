@@ -1,0 +1,59 @@
+{% extends "section.html" %}
+
+{% block head %}
+{{ super() }}
+<link rel="stylesheet" href="/index.css">
+{% endblock %}
+
+{% block content %}
+<main class="h-card" prefix="schema: https://schema.org" resource="#me" typeof="schema:person">
+    <div class="masthead">
+        {% if section.extra.hi_im %}
+        <h1 class="masthead-title">
+            {{ section.extra.hi_im }}
+            <span class="p-name" property="schema:name">
+                <span class="p-given-name" property="schema:givenName">Felipe</span>
+                <span class="p-family-name" property="schema:familyName">Keiler</span>
+            </span>
+        </h1>
+        {% endif %}
+        {% set image = resize_image(path="/memoji.png", width=119, height=153, format="webp") %}
+        <picture>
+            <source srcset="{{ image.url }}" type="image/webp">
+            <img class="masthead-img u-photo" property="schema:image" src="/memoji.png" width="119" height="153"
+                alt="" />
+        </picture>
+    </div>
+    <section>
+        {% if section.extra.about_me %}
+        <h2>{{ section.extra.about_me }}</h2>
+        {% endif %}
+        {% if section.extra.description %}
+        <p class="p-note" property="schema:description">
+            {{ section.extra.description | safe }}
+        </p>
+        {% endif %}
+    </section>
+    <section>
+        {% if section.extra.besides and section.extra.this_website and section.extra.you_can_also_find_me %}
+        <h2>
+            {{ section.extra.besides}}
+            <a class="u-url u-uid" rel="me schema:url" href="{{ config.base_url | safe }}">{{ section.extra.this_website
+                }}</a>,
+            {{ section.extra.you_can_also_find_me}}:
+        </h2>
+        {% endif %}
+        {% if section.extra.on %}
+        <ul>
+            {% for social_network in config.extra.social_networks %}
+            <li>
+                <a class="u-url" rel="me schema:url noopener noreferrer" href="{{ social_network.url | safe }}"
+                    target="_blank">{{social_network.username}}
+                    {{ section.extra.on }} {{social_network.name}}</a>
+            </li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </section>
+</main>
+{% endblock %}

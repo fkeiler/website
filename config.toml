@@ -1,0 +1,37 @@
+base_url = "https://felipe.keiler.nom.br"
+
+title = "Felipe Keiler 🐗"
+description = """
+I don't know how to describe me, so I asked an AI: “Based on the limited context provided, I do not have enough information to determine your identity”. Fair.
+"""
+default_language = "en"
+
+minify_html = true
+compile_sass = true
+
+build_search_index = false
+
+[markdown]
+highlight_code = false
+
+[translations]
+also_available = "This page is also available in English"
+
+[languages.pt-br]
+title = "Felipe Keiler 🐗"
+description = """
+Não sei como me descrever, então perguntei para uma IA, que me respondeu “Não posso te dizer quem você é. Autoconhecimento vem de dentro.”. Não me ajudou muito.
+"""
+
+[languages.pt-br.translations]
+also_available = "Esta página também está disponível em português"
+
+[[extra.social_networks]]
+name = "GitHub"
+username = "@fkeiler"
+url = "https://github.com/fkeiler"
+
+[[extra.social_networks]]
+name = "Mastodon"
+username = "fkeiler@mstdn.social"
+url = "https://mstdn.social/@fkeiler"

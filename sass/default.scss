@@ -1,0 +1,38 @@
+body {
+    color: #fff;
+    background-color: #000;
+    margin: 0;
+    padding: 1rem;
+    font-family: sans-serif;
+}
+
+a {
+    color: #5dc0fb;
+
+    &:visited {
+        color: #a6b6ff;
+    }
+
+    &:hover {
+        color: #a6deff;
+    }
+}
+
+@media (prefers-color-scheme:light) {
+    body {
+        color: #000;
+        background-color: #fff;
+    }
+
+    a {
+        color: #53a8bb;
+
+        &:visited {
+            color: #5365bb;
+        }
+
+        &:hover {
+            color: #378b9e;
+        }
+    }
+}

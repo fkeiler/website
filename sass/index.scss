@@ -1,0 +1,42 @@
+@keyframes slide-in-up {
+    0% {
+        opacity: 0;
+        transform: translateY(50%)
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+.masthead {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    margin-inline: auto;
+    display: flex;
+
+    .masthead-title {
+        text-align: center;
+        margin: 0;
+        font-size: 3rem;
+        font-weight: 900;
+    }
+
+    .masthead-img {
+        image-rendering: pixelated;
+        transition: transform .4s cubic-bezier(.68, -.55, .265, 1.55);
+        animation: .4s cubic-bezier(.175, .885, .32, 1.275) slide-in-up;
+        transform: translateY(-1.5rem);
+    }
+
+    &:hover .masthead-img {
+        transform: translateY(0);
+    }
+}
+
+section {
+    width: 80ch;
+    max-width: 100%;
+    margin: 0 auto
+}
