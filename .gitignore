@@ -1,3 +1,7 @@
+# Output directories
 public
-.vscode
+result
+# Image processing
 static/processed_images
+# Editor files
+.vscode
