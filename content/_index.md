@@ -14,6 +14,6 @@ your identity.</q>. Not very helpful.
 """
 besides = "Besides"
 this_website = "this website"
-you_can_also_find_me = "you can also find me on"
+you_can_also_find_me = "you can also find me as"
 on = "on"
 +++
