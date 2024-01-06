@@ -1,0 +1,9 @@
+# flyctl launch added from .gitignore
+# Output directories
+**/public
+**/result
+# Image processing
+**/static/processed_images
+# Editor files
+**/.vscode
+fly.toml
