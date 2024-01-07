@@ -7,3 +7,4 @@ RUN ["zola", "build"]
 FROM joseluisq/static-web-server:2
 COPY --from=builder /app/public /public
 ENV SERVER_PORT 8080
+ENV SERVER_SECURITY_HEADERS true
