@@ -30,8 +30,3 @@ also_available = "Esta página também está disponível em português"
 name = "GitHub"
 username = "@fkeiler"
 url = "https://github.com/fkeiler"
-
-[[extra.social_networks]]
-name = "Mastodon"
-username = "fkeiler@mstdn.social"
-url = "https://mstdn.social/@fkeiler"
